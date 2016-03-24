@@ -5,10 +5,10 @@ $(function () {
     
     Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
     
-    var user = new Backendless.user();
+    var user = new Backendless.User();
     user.email = "kenneth.peralta@hotmail.com";
     user.password = "sfgiantsRule8";
-    Backendless.userService.register(user);
+    Backendless.UserService.register(user);
     
 });
 
