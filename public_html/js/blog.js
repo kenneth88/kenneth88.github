@@ -5,11 +5,17 @@ $(function () {
     
     Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
     
-    var user = new Backendless.User();
-    user.email = "kenneth.peralta@hotmail.com";
-    user.password = "sfgiantsRule8";
-    Backendless.UserService.register(user);
+    var dataStore = Backendless.Persistence.of(Posts);
+    var post = new Posts({title:"My First Blog Post", content:"my first blog post contnet", email:"kenneth.peralta@hotmail.com"});
+    dataStore.save(post);
     
 });
+
+function Posts(args){
+    args = args || {};
+    this.title = args.title || "";
+    this.content = args.content || "";
+    this.authorEmail = args.emailEmail || "";
+}
 
 
