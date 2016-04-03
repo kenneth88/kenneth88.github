@@ -1,6 +1,6 @@
 body {
    display: flex;
-   min-height:  100vh;
+   min-height:  10vh;
    flex-direction: column;
 }
 
