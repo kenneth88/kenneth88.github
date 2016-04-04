@@ -19,7 +19,7 @@ $(function () {
         
       Backendless.UserService.login(email, password, true, new Backendless.Async(userLoggedIn, gotError));
     });
-  });
+   });
 
 function Posts(args){
     args = args || {};
@@ -28,8 +28,14 @@ function Posts(args){
     this.authorEmail = args.authorEmail || "";
 }
 
-function userLoggedIN() {
-    console.log("user successfully logged in");
+function userLoggedIN(user) {
+    console.log("user succsessfully logged in");
+    
+    var welcomeScript = $('#welcome-template').html();
+    var welcomeTemplate = Handlebars.compile(welcomeScript);
+    var welcomeHTML = welcomeTemplate(user);
+    
+    $('.main-container').html(welcomeHTML);
 }
 
 function gotError(error) {
