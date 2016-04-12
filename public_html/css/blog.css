@@ -25,3 +25,12 @@ main {
     font-style: italic;
 }
 
+.blogtitle{
+    font-size: 20px;
+    font-weight: bold; 
+}
+
+.contenttitle{
+    font-size: 20px;
+    font-weight: bold;
+}

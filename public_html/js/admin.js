@@ -86,6 +86,7 @@ function userLoggedIn(user) {
 function gotError(error) {
     console.log("Error message - " + error.message);
     console.log("Error code - " + error.code);
+    Materialize.toast('Incorrect Email or Password', 4000);
 }
 
 

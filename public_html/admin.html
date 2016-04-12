@@ -12,9 +12,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body>
+    <body class="">
         <header>
-            <nav>
+            <nav class="green accent-4">
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo">Blog</a>
                     <ul class="right">
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </main>
-        <footer class="page-footer">
+        <footer class="page-footer green accent-4">
             <div  class="container">
                 <p><a href="#">Back to the top</a></p>
             </div>
@@ -92,14 +92,16 @@
       <div class="row">
           <form class="col s12 form-add-blog">
               <div class="row">
+              <p class="blogtitle"> Title </p>
                    <div class="input-field col s12">
-                       <input id="title" type="text" name="title">
+                       <input required id="title" type="text" name="title">
                        <label for="title"></label>
                    </div>
               </div>
                  <div class="row">
+                 <p class="contenttitle"> Message </p>
                    <div class="input-field col s12">
-                       <textarea id="content" name="content" class="materialize-textarea"></textarea>
+                       <textarea required id="content" name="content" class="materialize-textarea"></textarea>
                        <label for="content"></label>
                    </div>
               </div>
@@ -113,8 +115,6 @@
           </form>
       </div>
       </script>
- 
-      
     </body>
   </html>
         
